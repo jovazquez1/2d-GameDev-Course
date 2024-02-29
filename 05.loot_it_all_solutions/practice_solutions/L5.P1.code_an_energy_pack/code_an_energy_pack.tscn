@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://mi6oe3jtducj"]
+
+[ext_resource type="PackedScene" uid="uid://dyt4nddd3y2iv" path="res://practice_solutions/L5.P1.code_an_energy_pack/ship_energy_pack.tscn" id="1_ok3ql"]
+[ext_resource type="PackedScene" uid="uid://c8quq7cyf586g" path="res://practice_solutions/L5.P1.code_an_energy_pack/energy_pack.tscn" id="2_glefu"]
+
+[node name="CodeAnEnergyPack" type="Node2D"]
+position = Vector2(960, 540)
+
+[node name="ShipEnergyPack" parent="." instance=ExtResource("1_ok3ql")]
+position = Vector2(-556, 0)
+
+[node name="EnergyPack" parent="." instance=ExtResource("2_glefu")]
+position = Vector2(-221, -1)
+
+[node name="EnergyPack2" parent="." instance=ExtResource("2_glefu")]
+position = Vector2(2, -1)
+
+[node name="EnergyPack3" parent="." instance=ExtResource("2_glefu")]
+position = Vector2(197, -1)
+
+[node name="ExtraVisuals" type="Node" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="ExtraVisuals"]
+position = Vector2(960, 540)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="ExtraVisuals"]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="ExtraVisuals/CanvasLayer" groups=["GDFExcludeVisibility"]]
+z_index = -3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.219608, 0.317647, 0.776471, 1)

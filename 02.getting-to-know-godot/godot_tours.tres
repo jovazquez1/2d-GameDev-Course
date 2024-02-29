@@ -1,0 +1,50 @@
+[gd_resource type="Resource" load_steps=9 format=3 uid="uid://c2s3yi41l51dc"]
+
+[ext_resource type="Script" path="res://addons/godot_tours/godot_tour_list.gd" id="1_jcgwy"]
+[ext_resource type="Script" path="res://addons/godot_tours/godot_tour_entry.gd" id="2_wh1da"]
+
+[sub_resource type="Resource" id="Resource_vrl3d"]
+script = ExtResource("2_wh1da")
+title = "101: The Godot Editor"
+is_free = true
+is_locked = false
+tour_path = "res://tours/godot-first-tour/godot_first_tour.gd"
+
+[sub_resource type="Resource" id="Resource_7h6kp"]
+script = ExtResource("2_wh1da")
+title = "102.a: Add a Player and Rooms"
+is_free = false
+is_locked = false
+tour_path = "res://tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd"
+
+[sub_resource type="Resource" id="Resource_4uji8"]
+script = ExtResource("2_wh1da")
+title = "102.b: Add bridges"
+is_free = false
+is_locked = false
+tour_path = "res://tours/102_assemble_your_first_game/02_add_bridges/02_add_bridges.gd"
+
+[sub_resource type="Resource" id="Resource_fnssm"]
+script = ExtResource("2_wh1da")
+title = "102.c: Add a sky and a healthbar"
+is_free = false
+is_locked = false
+tour_path = "res://tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd"
+
+[sub_resource type="Resource" id="Resource_c2v37"]
+script = ExtResource("2_wh1da")
+title = "102.d: Connect the healthbar to the player health"
+is_free = false
+is_locked = false
+tour_path = "res://tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd"
+
+[sub_resource type="Resource" id="Resource_ligjc"]
+script = ExtResource("2_wh1da")
+title = "102.e: Add a chest that spawns pickups"
+is_free = false
+is_locked = false
+tour_path = "res://tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd"
+
+[resource]
+script = ExtResource("1_jcgwy")
+tours = [SubResource("Resource_vrl3d"), SubResource("Resource_7h6kp"), SubResource("Resource_4uji8"), SubResource("Resource_fnssm"), SubResource("Resource_c2v37"), SubResource("Resource_ligjc")]

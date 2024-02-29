@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://dks1dwyrcaujc"]
+
+[ext_resource type="PackedScene" uid="uid://bnyjo0j7j0t3c" path="res://addons/gdquest_practice_framework/practice_solutions/L7.P1.spawn_random_items/random_collectible_placer.tscn" id="1_rmeuj"]
+
+[node name="SpawnRandomItems" type="Node2D"]
+
+[node name="RandomCollectiblePlacer" parent="." instance=ExtResource("1_rmeuj")]
+position = Vector2(960, 540)
+
+[node name="ExtraVisuals" type="Node" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="ExtraVisuals"]
+position = Vector2(960, 540)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="ExtraVisuals"]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="ExtraVisuals/CanvasLayer" groups=["GDFExcludeVisibility"]]
+z_index = -3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.219608, 0.317647, 0.776471, 1)

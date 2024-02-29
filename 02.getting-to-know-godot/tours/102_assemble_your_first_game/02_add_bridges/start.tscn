@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=3 uid="uid://bek5ct0gt62ll"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_rvprm"]
+[ext_resource type="TileSet" uid="uid://crkgfdw1y80hc" path="res://levels/rooms/tileset_bridges.tres" id="2_q3nql"]
+[ext_resource type="TileSet" uid="uid://cqb2wtrubw0n6" path="res://levels/rooms/tileset_invisible_walls.tres" id="3_i874h"]
+[ext_resource type="PackedScene" uid="uid://dds7yrrx56gcy" path="res://player/player.tscn" id="4_tkiy6"]
+[ext_resource type="PackedScene" uid="uid://dq3p4x4do28l6" path="res://levels/rooms/room_a.tscn" id="5_ojxe0"]
+[ext_resource type="PackedScene" uid="uid://dgayuh42w4v6u" path="res://levels/rooms/room_b.tscn" id="6_36m8s"]
+[ext_resource type="PackedScene" uid="uid://cq0mmphkbrvmm" path="res://levels/rooms/room_c.tscn" id="7_42yvj"]
+
+[node name="Start" type="Node2D"]
+script = ExtResource("1_rvprm")
+
+[node name="Bridges" type="TileMap" parent="."]
+tile_set = ExtResource("2_q3nql")
+format = 2
+layer_0/name = "Bridges"
+metadata/_edit_lock_ = true
+
+[node name="InvisibleWalls" type="TileMap" parent="."]
+tile_set = ExtResource("3_i874h")
+format = 2
+layer_0/name = "Invisible walls"
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." instance=ExtResource("4_tkiy6")]
+position = Vector2(-1280, 1536)
+
+[node name="RoomA" parent="." instance=ExtResource("5_ojxe0")]
+position = Vector2(-1792, 1280)
+
+[node name="RoomB" parent="." instance=ExtResource("6_36m8s")]
+position = Vector2(896, 1024)
+
+[node name="RoomC" parent="." instance=ExtResource("7_42yvj")]
+position = Vector2(896, -1536)

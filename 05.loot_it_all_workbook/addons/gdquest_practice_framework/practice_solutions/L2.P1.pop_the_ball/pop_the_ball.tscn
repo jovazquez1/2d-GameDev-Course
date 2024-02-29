@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6c3t31iabqkd"]
+
+[ext_resource type="PackedScene" uid="uid://bfgqh50gl65fh" path="res://addons/gdquest_practice_framework/practice_solutions/L2.P1.pop_the_ball/ball.tscn" id="1_xqixp"]
+[ext_resource type="PackedScene" uid="uid://dtvknghopx72o" path="res://addons/gdquest_practice_framework/practice_solutions/L2.P1.pop_the_ball/needle.tscn" id="2_ka8hs"]
+
+[node name="PopTheBall" type="Node2D"]
+position = Vector2(960, 540)
+
+[node name="Ball" parent="." instance=ExtResource("1_xqixp")]
+position = Vector2(-136, 38)
+
+[node name="Ball2" parent="." instance=ExtResource("1_xqixp")]
+position = Vector2(69, 38)
+
+[node name="Ball3" parent="." instance=ExtResource("1_xqixp")]
+position = Vector2(278, 38)
+
+[node name="Needle" parent="." instance=ExtResource("2_ka8hs")]
+position = Vector2(-399, 38)
+
+[node name="ExtraVisuals" type="Node" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="ExtraVisuals"]
+position = Vector2(960, 540)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="ExtraVisuals"]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="ExtraVisuals/CanvasLayer" groups=["GDFExcludeVisibility"]]
+z_index = -3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.219608, 0.317647, 0.776471, 1)

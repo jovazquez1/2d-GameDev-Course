@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://practices/L7.P1.spawn_random_items/random_collectible_placer.tscn" id="1_xxubk"]
+[ext_resource type="Script" path="res://practices/L7.P1.spawn_random_items/random_collectible_placer.gd" id="2_fmxc1"]
+
+[node name="SpawnRandomItems" type="Node2D"]
+
+[node name="RandomCollectiblePlacer" type="Node2D" parent="." instance=ExtResource("1_xxubk")]
+position = Vector2(960, 540)
+script = ExtResource("2_fmxc1")
+
+[node name="ExtraVisuals" type="Node" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="ExtraVisuals"]
+position = Vector2(960, 540)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="ExtraVisuals"]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="ExtraVisuals/CanvasLayer"]
+z_index = -3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.219608, 0.317647, 0.776471, 1)

@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="PackedScene" path="res://practices/L6.P2.coins_and_energy_packs/ship_coins_and_energy_packs.tscn" id="1_l7py2"]
+[ext_resource type="Script" path="res://practices/L6.P2.coins_and_energy_packs/ship_coins_and_energy_packs.gd" id="2_mt54v"]
+[ext_resource type="PackedScene" path="res://practices/L6.P2.coins_and_energy_packs/coin.tscn" id="3_v6eww"]
+[ext_resource type="Script" path="res://practices/L6.P2.coins_and_energy_packs/collectible.gd" id="4_ynkwx"]
+[ext_resource type="PackedScene" path="res://practices/L6.P2.coins_and_energy_packs/energy_pack.tscn" id="5_4aryi"]
+
+[node name="CoinsAndEnergyPacks" type="Node2D"]
+
+[node name="Ship" type="Area2D" parent="." instance=ExtResource("1_l7py2")]
+position = Vector2(962, 534)
+script = ExtResource("2_mt54v")
+
+[node name="Coin" type="Area2D" parent="." instance=ExtResource("3_v6eww")]
+position = Vector2(544, 336)
+script = ExtResource("4_ynkwx")
+
+[node name="EnergyPack" type="Area2D" parent="." instance=ExtResource("5_4aryi")]
+position = Vector2(564, 707)
+script = ExtResource("4_ynkwx")
+
+[node name="Coin2" type="Area2D" parent="." instance=ExtResource("3_v6eww")]
+position = Vector2(971, 862)
+script = ExtResource("4_ynkwx")
+
+[node name="EnergyPack2" type="Area2D" parent="." instance=ExtResource("5_4aryi")]
+position = Vector2(1337, 631)
+script = ExtResource("4_ynkwx")
+
+[node name="Coin3" type="Area2D" parent="." instance=ExtResource("3_v6eww")]
+position = Vector2(1337, 284)
+script = ExtResource("4_ynkwx")
+
+[node name="EnergyPack3" type="Area2D" parent="." instance=ExtResource("5_4aryi")]
+position = Vector2(925, 168)
+script = ExtResource("4_ynkwx")
+
+[node name="ExtraVisuals" type="Node" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="ExtraVisuals"]
+position = Vector2(960, 540)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="ExtraVisuals"]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="ExtraVisuals/CanvasLayer"]
+z_index = -3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.219608, 0.317647, 0.776471, 1)
