@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://dfrp0km2xjcr6"]
+[gd_scene load_steps=10 format=3 uid="uid://dfrp0km2xjcr6"]
 
 [ext_resource type="Script" path="res://game.gd" id="2"]
 [ext_resource type="TileSet" uid="uid://crkgfdw1y80hc" path="res://levels/rooms/tileset_bridges.tres" id="2_vnf5n"]
 [ext_resource type="TileSet" uid="uid://cqb2wtrubw0n6" path="res://levels/rooms/tileset_invisible_walls.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://dds7yrrx56gcy" path="res://player/player.tscn" id="4_pgjs4"]
+[ext_resource type="PackedScene" uid="uid://cu2rb5dl4ljte" path="res://tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/levels/rooms/room_a.tscn" id="5_o6alg"]
+[ext_resource type="PackedScene" uid="uid://dgayuh42w4v6u" path="res://levels/rooms/room_b.tscn" id="6_thoao"]
+[ext_resource type="PackedScene" uid="uid://cq0mmphkbrvmm" path="res://levels/rooms/room_c.tscn" id="7_ncwxr"]
+[ext_resource type="PackedScene" uid="uid://wdey00p3syru" path="res://levels/background/background_blue_sky.tscn" id="8_gh77d"]
+[ext_resource type="PackedScene" uid="uid://cce7r30dfjm4r" path="res://interface/bars/ui_health_bar.tscn" id="9_myxpr"]
 
 [node name="Start" type="Node2D"]
 script = ExtResource("2")
@@ -11,10 +17,43 @@ script = ExtResource("2")
 tile_set = ExtResource("2_vnf5n")
 format = 2
 layer_0/name = "Bridges"
+layer_0/tile_data = PackedInt32Array(-131074, 262144, 1, -524282, 262144, 1, -589818, 65536, 0, -589817, 0, 1, -589816, 0, 1, -589815, 0, 1, -589814, 0, 1, -589813, 0, 1, -589812, 0, 0, -524276, 196608, 1, -458740, 196608, 1, -393204, 196608, 1, -327668, 196608, 1, -196596, 196608, 1, -262132, 196608, 1, -131060, 196608, 1, -65524, 196608, 1, 12, 196608, 1, 65548, 196608, 1, 196620, 196608, 1, 131084, 196608, 1, 327692, 196608, 1, 262156, 196608, 1, 393228, 196608, 1, 458765, 0, 1, 458768, 0, 1, 458767, 0, 1, 458766, 0, 1, 458770, 0, 1, 458769, 0, 1, 458773, 0, 1, 458772, 0, 1, 458771, 0, 1, 458775, 196608, 0, 458774, 0, 1, 327703, 327680, 1, 393239, 196608, 1, 458764, 131072, 0, 262167, 262144, 1)
 metadata/_edit_lock_ = true
 
 [node name="InvisibleWalls" type="TileMap" parent="."]
 tile_set = ExtResource("3")
 format = 2
 layer_0/name = "Invisible walls"
+layer_0/tile_data = PackedInt32Array(-589819, 0, 0, -655355, 0, 0, -655354, 0, 0, -655353, 0, 0, -655352, 0, 0, -655351, 0, 0, -655350, 0, 0, -655349, 0, 0, -655348, 0, 0, -655347, 0, 0, -589811, 0, 0, -524275, 0, 0, -458739, 0, 0, -393203, 0, 0, -327667, 0, 0, -262131, 0, 0, -196595, 0, 0, -458742, 0, 0, -458741, 0, 0, -393205, 0, 0, -327669, 0, 0, -262133, 0, 0, -196597, 0, 0, -131061, 0, 0, -65525, 0, 0, 11, 0, 0, 65547, 0, 0, 131083, 0, 0, 196619, 0, 0, 262155, 0, 0, 327691, 0, 0, 393227, 0, 0, 458763, 0, 0, 393229, 0, 0, 327693, 0, 0, 262157, 0, 0, 196621, 0, 0, 131085, 0, 0, 65549, 0, 0, 13, 0, 0, -65523, 0, 0, -131059, 0, 0, 393230, 0, 0, 393231, 0, 0, 393232, 0, 0, 393233, 0, 0, 393234, 0, 0, 393235, 0, 0, 393236, 0, 0, 393237, 0, 0, 393238, 0, 0, 393240, 0, 0, 458776, 0, 0, 524312, 0, 0, 524311, 0, 0, 524310, 0, 0, 524309, 0, 0, 524308, 0, 0, 524307, 0, 0, 524306, 0, 0, 524305, 0, 0, 524304, 0, 0, 524303, 0, 0, 524302, 0, 0, 524301, 0, 0, 524300, 0, 0, 524299, 0, 0)
 metadata/_edit_lock_ = true
+
+[node name="Player" parent="." instance=ExtResource("4_pgjs4")]
+position = Vector2(-896, -384)
+
+[node name="RoomA" parent="." instance=ExtResource("5_o6alg")]
+position = Vector2(-1664, -896)
+
+[node name="RoomB" parent="." instance=ExtResource("6_thoao")]
+position = Vector2(-128, -896)
+
+[node name="RoomC" parent="." instance=ExtResource("7_ncwxr")]
+position = Vector2(1792, -768)
+
+[node name="BackgroundBlueSky" parent="." instance=ExtResource("8_gh77d")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+offset = Vector2(60, 60)
+transform = Transform2D(1, 0, 0, 1, 60, 60)
+
+[node name="UIHealthBar" parent="CanvasLayer" instance=ExtResource("9_myxpr")]
+custom_minimum_size = Vector2(60, 60)
+offset_left = -627.0
+offset_top = 562.0
+offset_right = -309.0
+offset_bottom = 634.725
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[connection signal="health_changed" from="Player" to="." method="_on_player_health_changed"]

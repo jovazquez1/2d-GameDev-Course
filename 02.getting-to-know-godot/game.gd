@@ -16,3 +16,7 @@ func _ready() -> void:
 
 func _on_Player_died() -> void:
 	get_tree().change_scene_to_file("res://game_over.tscn")
+
+
+func _on_player_health_changed(new_health):
+	pass # Replace with function body.

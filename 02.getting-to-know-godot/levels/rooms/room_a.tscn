@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cu2rb5dl4ljte"]
+[gd_scene load_steps=3 format=3 uid="uid://cu2rb5dl4ljte"]
 
 [ext_resource type="PackedScene" uid="uid://bupkynq73ufaa" path="res://levels/base_room.tscn" id="1_plgur"]
+[ext_resource type="PackedScene" uid="uid://cl1xkaij81jjs" path="res://levels/rooms/chests/chest.tscn" id="2_eyrnf"]
 
 [node name="RoomA" instance=ExtResource("1_plgur")]
 rotation = -0.00114604
@@ -13,3 +14,6 @@ layer_2/tile_data = PackedInt32Array(262145, 262149, 5, 262146, 5, 4, 262147, 32
 
 [node name="InvisibleWalls" parent="." index="1"]
 layer_0/tile_data = PackedInt32Array(-65532, 0, 0, -65529, 0, 0, -65528, 0, 0, -65527, 0, 0, 11, 0, 0, 65547, 0, 0, 131083, 0, 0, 196619, 0, 0, 327691, 0, 0, 458751, 0, 0, 524287, 0, 0, 524299, 0, 0, 589835, 0, 0, 655371, 0, 0, 393215, 0, 0, 327679, 0, 0, -65531, 0, 0, -65530, 0, 0, 393227, 0, 0, 458763, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 655369, 0, 0, 655370, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 9, 0, 0, 10, 0, 0, 65536, 0, 0, 131072, 0, 0, 196608, 0, 0, 196609, 65536, 0, 262144, 0, 0, 262145, 0, 0, 458752, 65536, 0, 524288, 0, 0, 524289, 65536, 0, 589825, 0, 0, 589826, 65536, 0, 589827, 65536, 0, 589828, 65536, 0, 589829, 65536, 0, 589830, 65536, 0, 589832, 65536, 0, 589833, 65536, 0, 589834, 65536, 0, 589824, 0, 0, 589831, 65536, 0)
+
+[node name="Chest" parent="." index="2" instance=ExtResource("2_eyrnf")]
+position = Vector2(895.266, 641.026)

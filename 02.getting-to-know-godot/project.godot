@@ -31,6 +31,10 @@ window/size/viewport_height=1080
 window/stretch/mode="2d"
 window/size/fullscreen=true
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_tours/plugin.cfg")
+
 [filesystem]
 
 import/blender/enabled=false
@@ -145,7 +149,7 @@ aim_down={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://addons/gdquest_welcome_tour/tours/learn-gamedev-from-zero/tour.gd", "res://addons/gdquest_welcome_tour/tours/welcome/welcome.gd", "res://addons/gdquest_welcome_tour/tours/godot-first-tour/godot_first_tour.gd", "res://addons/gdquest_welcome_tour/tours/learn-gamedev-from-zero/assemble_path_of_sorcerers.gd", "res://addons/gdquest_welcome_tour/tours/test/debug_and_tests.gd", "res://addons/godot_tours/tours/godot-first-tour/godot_first_tour.gd", "res://addons/godot_tours/tours/learn-gamedev-from-zero/assemble_path_of_sorcerers.gd", "res://addons/godot_tours/tours/test/debug_and_tests.gd", "res://tours/learn-gamedev-from-zero/assemble_path_of_sorcerers_1.gd", "res://tours/learn-gamedev-from-zero/assemble_path_of_sorcerers_2.gd")
+locale/translations_pot_files=PackedStringArray("res://addons/gdquest_welcome_tour/tours/learn-gamedev-from-zero/tour.gd", "res://addons/gdquest_welcome_tour/tours/welcome/welcome.gd", "res://addons/gdquest_welcome_tour/tours/godot-first-tour/godot_first_tour.gd", "res://addons/gdquest_welcome_tour/tours/learn-gamedev-from-zero/assemble_path_of_sorcerers.gd", "res://addons/gdquest_welcome_tour/tours/test/debug_and_tests.gd", "res://addons/godot_tours/tours/godot-first-tour/godot_first_tour.gd", "res://addons/godot_tours/tours/learn-gamedev-from-zero/assemble_path_of_sorcerers.gd", "res://addons/godot_tours/tours/test/debug_and_tests.gd", "res://tours/learn-gamedev-from-zero/assemble_path_of_sorcerers_1.gd", "res://tours/learn-gamedev-from-zero/assemble_path_of_sorcerers_2.gd", "res://addons/godot_tours/tour.gd", "res://tours/godot-first-tour/godot_first_tour.gd", "res://tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd", "res://tours/102_assemble_your_first_game/02_add_bridges/02_add_bridges.gd", "res://tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd", "res://tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd", "res://tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd")
 
 [layer_names]
 
