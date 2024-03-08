@@ -47,7 +47,7 @@ offset = Vector2(60, 60)
 transform = Transform2D(1, 0, 0, 1, 60, 60)
 
 [node name="UIHealthBar" parent="CanvasLayer" instance=ExtResource("9_myxpr")]
-custom_minimum_size = Vector2(60, 60)
+custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
 offset_left = 60.0
 offset_top = 60.0
 offset_right = 378.0
