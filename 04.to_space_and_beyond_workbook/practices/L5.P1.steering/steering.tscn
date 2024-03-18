@@ -1,9 +1,9 @@
-[gd_scene load_steps=8 format=3]
+[gd_scene load_steps=8 format=3 uid="uid://dvqk2ovl0w15p"]
 
-[ext_resource type="Texture2D" path="res://assets/practice_assets/shape_ship.png" id="1_43x22"]
+[ext_resource type="Texture2D" uid="uid://d1xp2mgpkkc42" path="res://assets/practice_assets/shape_ship.png" id="1_43x22"]
 [ext_resource type="Script" path="res://practices/L5.P1.steering/steering.gd" id="2_fdpd8"]
-[ext_resource type="Texture2D" path="res://assets/practice_assets/ellipse_white.png" id="3_ovrv2"]
-[ext_resource type="Texture2D" path="res://assets/practice_assets/ellipse_yellow.png" id="4_q4dmt"]
+[ext_resource type="Texture2D" uid="uid://bkueifls7csiy" path="res://assets/practice_assets/ellipse_white.png" id="3_ovrv2"]
+[ext_resource type="Texture2D" uid="uid://ci5b253al1tus" path="res://assets/practice_assets/ellipse_yellow.png" id="4_q4dmt"]
 
 [sub_resource type="Curve" id="Curve_p40xv"]
 _data = [Vector2(0, 0.663194), 0.0, 0.0, 0, 0, Vector2(1, 0), -0.0319997, 0.0, 0, 0]
