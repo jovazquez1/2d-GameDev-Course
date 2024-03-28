@@ -3,7 +3,6 @@ var max_speed := 1200.0
 var velocity := Vector2(0, 0)
 var steering_factor := 3.0
 
-
 func _process(delta: float) -> void:
 	var direction := Vector2(0, 0)
 	direction.x = Input.get_axis("move_left", "move_right")
@@ -14,5 +13,5 @@ func _process(delta: float) -> void:
 	var steering := desired_velocity - velocity
 	velocity += steering * steering_factor * delta
 	position += velocity * delta
-	if velocity.length() > 0.0:
-		rotation = velocity.angle()
+	if velocity.length() > 0.0: 
+		get_node("Sprite2D").rotation = velocity.angle()
