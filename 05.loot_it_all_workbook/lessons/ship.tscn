@@ -42,13 +42,14 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="ProgressBar" type="ProgressBar" parent="UI"]
+[node name="HealthBar" type="ProgressBar" parent="UI"]
 layout_mode = 0
 offset_left = -94.0
 offset_top = -76.0
 offset_right = 97.0
 offset_bottom = -66.0
 theme_override_styles/fill = SubResource("StyleBoxFlat_lmjny")
-max_value = 66.0
-value = 41.23
+value = 10.0
 show_percentage = false
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
