@@ -1,9 +1,9 @@
-[gd_scene load_steps=10 format=3]
+[gd_scene load_steps=10 format=3 uid="uid://jf3l5ciyltb6"]
 
-[ext_resource type="Script" path="res://practices/L6.P1.create_coins/ship_create_coins.gd" id="1_gkcxq"]
-[ext_resource type="Texture2D" path="res://assets/practice_assets/ellipse_white.png" id="2_bwehp"]
-[ext_resource type="Texture2D" path="res://assets/practice_assets/shape_ship.png" id="3_uipmn"]
-[ext_resource type="Texture2D" path="res://assets/practice_assets/coin.png" id="4_eh7qw"]
+[ext_resource type="Script" path="res://practices/L6.P1.create_coins/ship_create_coins.gd" id="1_5rje1"]
+[ext_resource type="Texture2D" uid="uid://bkueifls7csiy" path="res://assets/practice_assets/ellipse_white.png" id="2_bwehp"]
+[ext_resource type="Texture2D" uid="uid://d1xp2mgpkkc42" path="res://assets/practice_assets/shape_ship.png" id="3_uipmn"]
+[ext_resource type="Texture2D" uid="uid://b5n8ybmtouhk0" path="res://assets/practice_assets/coin.png" id="4_eh7qw"]
 
 [sub_resource type="Curve" id="Curve_f7g5y"]
 _data = [Vector2(0, 0.663194), 0.0, 0.0, 0, 0, Vector2(1, 0), -0.0319997, 0.0, 0, 0]
@@ -27,7 +27,7 @@ outline_size = 12
 outline_color = Color(0, 0, 0, 1)
 
 [node name="Ship" type="Area2D"]
-script = ExtResource("1_gkcxq")
+script = ExtResource("1_5rje1")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 modulate = Color(0.584314, 0.380392, 0.933333, 1)

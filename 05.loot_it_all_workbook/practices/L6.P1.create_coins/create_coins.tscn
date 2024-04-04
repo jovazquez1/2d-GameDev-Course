@@ -1,13 +1,24 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://ducpsy0j3u0dw"]
 
-[ext_resource type="PackedScene" path="res://practices/L6.P1.create_coins/ship_create_coins.tscn" id="1_x2knq"]
-[ext_resource type="Script" path="res://practices/L6.P1.create_coins/ship_create_coins.gd" id="2_ytyj5"]
+[ext_resource type="PackedScene" uid="uid://jf3l5ciyltb6" path="res://practices/L6.P1.create_coins/ship_create_coins.tscn" id="1_x2knq"]
+[ext_resource type="PackedScene" uid="uid://jig50aa2cktb" path="res://addons/gdquest_practice_framework/practice_solutions/L6.P1.create_coins/coin.tscn" id="2_4c1n3"]
 
 [node name="CreateCoins" type="Node2D"]
 
-[node name="Ship" type="Area2D" parent="." instance=ExtResource("1_x2knq")]
+[node name="Ship" parent="." instance=ExtResource("1_x2knq")]
 position = Vector2(973, 541)
-script = ExtResource("2_ytyj5")
+
+[node name="Coin" parent="." instance=ExtResource("2_4c1n3")]
+position = Vector2(408, 727)
+
+[node name="Coin2" parent="." instance=ExtResource("2_4c1n3")]
+position = Vector2(391, 213)
+
+[node name="Coin3" parent="." instance=ExtResource("2_4c1n3")]
+position = Vector2(1299, 793)
+
+[node name="Coin4" parent="." instance=ExtResource("2_4c1n3")]
+position = Vector2(1450, 448)
 
 [node name="ExtraVisuals" type="Node" parent="."]
 
