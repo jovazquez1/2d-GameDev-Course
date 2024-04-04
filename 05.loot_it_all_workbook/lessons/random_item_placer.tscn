@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bw0tt2rol5vp8"]
+
+[ext_resource type="Script" path="res://lessons/random_item_placer.gd" id="1_elmvh"]
+
+[node name="RandomItemPlacer" type="Node2D"]
+script = ExtResource("1_elmvh")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
