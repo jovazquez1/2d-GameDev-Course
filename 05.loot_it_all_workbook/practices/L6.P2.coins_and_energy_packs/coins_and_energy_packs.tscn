@@ -1,30 +1,30 @@
 [gd_scene load_steps=4 format=3 uid="uid://dt6h45a5tgppm"]
 
-[ext_resource type="PackedScene" path="res://practices/L6.P2.coins_and_energy_packs/ship_coins_and_energy_packs.tscn" id="1_l7py2"]
-[ext_resource type="PackedScene" path="res://practices/L6.P2.coins_and_energy_packs/coin.tscn" id="3_v6eww"]
-[ext_resource type="PackedScene" path="res://practices/L6.P2.coins_and_energy_packs/energy_pack.tscn" id="5_4aryi"]
+[ext_resource type="PackedScene" uid="uid://dgmumjtynxhu0" path="res://practices/L6.P2.coins_and_energy_packs/ship_coins_and_energy_packs.tscn" id="1_l7py2"]
+[ext_resource type="PackedScene" uid="uid://c61s162y5wmbq" path="res://practices/L6.P2.coins_and_energy_packs/coin.tscn" id="3_v6eww"]
+[ext_resource type="PackedScene" uid="uid://chgdhqtxn2n4y" path="res://practices/L6.P2.coins_and_energy_packs/energy_pack.tscn" id="5_4aryi"]
 
 [node name="CoinsAndEnergyPacks" type="Node2D"]
 
 [node name="Ship" parent="." instance=ExtResource("1_l7py2")]
 position = Vector2(962, 534)
 
-[node name="Coin" parent="." groups=["coin"] instance=ExtResource("3_v6eww")]
+[node name="Coin" parent="." instance=ExtResource("3_v6eww")]
 position = Vector2(544, 336)
 
-[node name="EnergyPack" parent="." groups=["energy"] instance=ExtResource("5_4aryi")]
+[node name="EnergyPack" parent="." instance=ExtResource("5_4aryi")]
 position = Vector2(564, 707)
 
-[node name="Coin2" parent="." groups=["coin"] instance=ExtResource("3_v6eww")]
+[node name="Coin2" parent="." instance=ExtResource("3_v6eww")]
 position = Vector2(971, 862)
 
-[node name="EnergyPack2" parent="." groups=["energy"] instance=ExtResource("5_4aryi")]
+[node name="EnergyPack2" parent="." instance=ExtResource("5_4aryi")]
 position = Vector2(1337, 631)
 
-[node name="Coin3" parent="." groups=["coin"] instance=ExtResource("3_v6eww")]
+[node name="Coin3" parent="." instance=ExtResource("3_v6eww")]
 position = Vector2(1337, 284)
 
-[node name="EnergyPack3" parent="." groups=["energy"] instance=ExtResource("5_4aryi")]
+[node name="EnergyPack3" parent="." instance=ExtResource("5_4aryi")]
 position = Vector2(925, 168)
 
 [node name="ExtraVisuals" type="Node" parent="."]
