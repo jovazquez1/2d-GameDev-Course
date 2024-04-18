@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://dl3e5oo6bjp3r"]
+
+[ext_resource type="PackedScene" uid="uid://bw7xpqdakrh5n" path="res://practice_solutions/L6.P1.the_pinata/balloon_pinata.tscn" id="1_7mc3c"]
+
+[node name="ThePiñata" type="Node2D"]
+metadata/_edit_horizontal_guides_ = []
+
+[node name="BalloonPinata" parent="." instance=ExtResource("1_7mc3c")]
+
+[node name="ExtraVisuals" type="Node" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="ExtraVisuals"]
+position = Vector2(960, 540)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="ExtraVisuals"]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="ExtraVisuals/CanvasLayer" groups=["GDFExcludeVisibility"]]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.152941, 0.168627, 0.188235, 1)

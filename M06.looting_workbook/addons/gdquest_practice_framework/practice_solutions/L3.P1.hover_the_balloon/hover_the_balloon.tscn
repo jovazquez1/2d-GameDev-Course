@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfsm5sn5fomt2"]
+
+[ext_resource type="PackedScene" uid="uid://bmdplhbajlq3e" path="res://addons/gdquest_practice_framework/practice_solutions/L3.P1.hover_the_balloon/balloon_hover.tscn" id="1_an6m0"]
+
+[node name="HoverTheBalloon" type="Node2D"]
+metadata/_edit_horizontal_guides_ = []
+
+[node name="BalloonHover" parent="." instance=ExtResource("1_an6m0")]
+
+[node name="ExtraVisuals" type="Node" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="ExtraVisuals"]
+position = Vector2(960, 540)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="ExtraVisuals"]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="ExtraVisuals/CanvasLayer" groups=["GDFExcludeVisibility"]]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.152941, 0.168627, 0.188235, 1)
