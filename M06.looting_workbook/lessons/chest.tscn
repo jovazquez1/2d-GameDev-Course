@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://bclil1rwjeykb"]
+[gd_scene load_steps=8 format=3 uid="uid://bclil1rwjeykb"]
 
+[ext_resource type="Script" path="res://lessons/chest.gd" id="1_c7lxx"]
 [ext_resource type="Shader" path="res://lessons/chest/group_outline.gdshader" id="1_k2gbe"]
 [ext_resource type="Texture2D" uid="uid://c3hwsm5ugp8qw" path="res://lessons/chest/bottom.png" id="2_0djwq"]
 [ext_resource type="Texture2D" uid="uid://bnem1cahhoxdk" path="res://lessons/chest/top.png" id="3_awfea"]
@@ -9,12 +10,14 @@
 size = Vector2(100, 85)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3xmmk"]
+resource_local_to_scene = true
 shader = ExtResource("1_k2gbe")
 shader_parameter/line_color = Color(0, 0, 0, 1)
-shader_parameter/line_thickness = 5.0
+shader_parameter/line_thickness = 6.0
 shader_parameter/viewport_scale = Vector2(1, 1)
 
 [node name="Chest" type="Area2D"]
+script = ExtResource("1_c7lxx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false

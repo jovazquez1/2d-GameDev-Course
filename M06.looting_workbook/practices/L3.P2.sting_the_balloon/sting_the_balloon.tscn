@@ -1,16 +1,11 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=2 format=3 uid="uid://h60i1sitqojq"]
 
-[ext_resource type="PackedScene" path="res://practices/L3.P2.sting_the_balloon/balloon_sting.tscn" id="1_cq1j7"]
-[ext_resource type="Script" path="res://practices/L3.P2.sting_the_balloon/balloon_sting.gd" id="2_hngyr"]
+[ext_resource type="PackedScene" uid="uid://jrovt06nkrbm" path="res://practices/L3.P2.sting_the_balloon/balloon_sting.tscn" id="1_cq1j7"]
 
 [node name="StingTheBalloon" type="Node2D"]
 metadata/_edit_horizontal_guides_ = []
 
-[node name="BalloonSting" type="Area2D" parent="." instance=ExtResource("1_cq1j7")]
-position = Vector2(960, 540)
-collision_layer = 2
-collision_mask = 0
-script = ExtResource("2_hngyr")
+[node name="BalloonSting" parent="." instance=ExtResource("1_cq1j7")]
 
 [node name="ExtraVisuals" type="Node" parent="."]
 

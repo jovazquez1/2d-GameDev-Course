@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cit7gnkdckyux"]
+[gd_scene load_steps=12 format=3 uid="uid://cit7gnkdckyux"]
 
 [ext_resource type="Texture2D" uid="uid://114x1a0rmx4l" path="res://assets/dungeon/smooth_dungeon_tileset.png" id="1_sym7n"]
 [ext_resource type="Texture2D" uid="uid://cae527caaj50v" path="res://assets/dungeon/shadow_map.png" id="2_jthdw"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c1rgncfgjxefj" path="res://assets/dungeon/pillar.png" id="4_gq228"]
 [ext_resource type="Texture2D" uid="uid://l0y1k1obencd" path="res://assets/dungeon/spider_web.png" id="5_ywba7"]
 [ext_resource type="PackedScene" uid="uid://eundh35r605v" path="res://assets/torch/torch.tscn" id="6_fokey"]
+[ext_resource type="PackedScene" uid="uid://bclil1rwjeykb" path="res://lessons/chest.tscn" id="7_xv2v2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6s4s5"]
 texture = ExtResource("1_sym7n")
@@ -321,3 +322,12 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0.977546, 0.842183, 0.960847, 1)
 metadata/_edit_lock_ = true
+
+[node name="Chest" parent="." instance=ExtResource("7_xv2v2")]
+position = Vector2(730, 252)
+
+[node name="Chest2" parent="." instance=ExtResource("7_xv2v2")]
+position = Vector2(475, 270)
+
+[node name="Chest3" parent="." instance=ExtResource("7_xv2v2")]
+position = Vector2(641, 393)

@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=6 format=3 uid="uid://jrovt06nkrbm"]
 
 [ext_resource type="Script" path="res://practices/L3.P2.sting_the_balloon/balloon_sting.gd" id="1_bhjam"]
-[ext_resource type="Material" path="res://practices/L3.P2.sting_the_balloon/material.tres" id="2_rlib3"]
-[ext_resource type="Texture2D" path="res://practices/L3.P2.sting_the_balloon/balloon_tail.png" id="3_ujshq"]
-[ext_resource type="Texture2D" path="res://practices/L3.P2.sting_the_balloon/balloon_top.png" id="4_4hph6"]
+[ext_resource type="Material" uid="uid://mu3l3tnidk6h" path="res://practices/L3.P2.sting_the_balloon/material.tres" id="2_rlib3"]
+[ext_resource type="Texture2D" uid="uid://bkhg7vixe1w41" path="res://practices/L3.P2.sting_the_balloon/balloon_tail.png" id="3_ujshq"]
+[ext_resource type="Texture2D" uid="uid://bn6jrawnf5ijj" path="res://practices/L3.P2.sting_the_balloon/balloon_top.png" id="4_4hph6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lppgf"]
 radius = 47.0
@@ -32,3 +32,5 @@ offset = Vector2(0, 34)
 position = Vector2(0, -79)
 texture = ExtResource("4_4hph6")
 offset = Vector2(0, 5)
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
