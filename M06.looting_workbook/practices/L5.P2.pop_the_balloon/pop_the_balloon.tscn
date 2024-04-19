@@ -1,16 +1,11 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=2 format=3 uid="uid://dt67v5fqlb8le"]
 
 [ext_resource type="PackedScene" path="res://practices/L5.P2.pop_the_balloon/balloon_pop.tscn" id="1_enrvy"]
-[ext_resource type="Script" path="res://practices/L5.P2.pop_the_balloon/balloon_pop.gd" id="2_xkyg3"]
 
 [node name="PopTheBalloon" type="Node2D"]
 metadata/_edit_horizontal_guides_ = []
 
-[node name="BalloonPop" type="Area2D" parent="." instance=ExtResource("1_enrvy")]
-position = Vector2(960, 540)
-collision_layer = 2
-collision_mask = 0
-script = ExtResource("2_xkyg3")
+[node name="BalloonPop" parent="." instance=ExtResource("1_enrvy")]
 
 [node name="ExtraVisuals" type="Node" parent="."]
 
