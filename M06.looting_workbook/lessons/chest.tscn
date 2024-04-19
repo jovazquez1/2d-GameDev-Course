@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bclil1rwjeykb"]
+[gd_scene load_steps=11 format=3 uid="uid://bclil1rwjeykb"]
 
 [ext_resource type="Script" path="res://lessons/chest.gd" id="1_c7lxx"]
 [ext_resource type="Shader" path="res://lessons/chest/group_outline.gdshader" id="1_k2gbe"]
@@ -15,6 +15,42 @@ shader = ExtResource("1_k2gbe")
 shader_parameter/line_color = Color(0, 0, 0, 1)
 shader_parameter/line_thickness = 6.0
 shader_parameter/viewport_scale = Vector2(1, 1)
+
+[sub_resource type="Animation" id="Animation_odeoy"]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasGroup/Top:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, -24), Vector2(54, -87), Vector2(115, 20)]
+}
+
+[sub_resource type="Animation" id="Animation_kjwls"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasGroup/Top:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, -24)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m65gq"]
+_data = {
+"RESET": SubResource("Animation_kjwls"),
+"open": SubResource("Animation_odeoy")
+}
 
 [node name="Chest" type="Area2D"]
 script = ExtResource("1_c7lxx")
@@ -37,3 +73,8 @@ texture = ExtResource("3_awfea")
 
 [node name="Lock" type="Sprite2D" parent="CanvasGroup"]
 texture = ExtResource("4_kpo0r")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_m65gq")
+}
