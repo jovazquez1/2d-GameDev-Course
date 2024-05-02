@@ -8,7 +8,7 @@ func open() -> void:
 	animation_player.play("open")
 	input_pickable = false
 	if possible_items.is_empty():
-		return
+		return    
 	for current_index in range(randi_range(1, 3)):
 		_spawn_random_item()
 func _ready() -> void:

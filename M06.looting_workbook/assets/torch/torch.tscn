@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://eundh35r605v"]
+[gd_scene load_steps=11 format=3 uid="uid://eundh35r605v"]
 
 [ext_resource type="Texture2D" uid="uid://d3unutq03pfot" path="res://assets/torch/torch_body.png" id="1_6r3s4"]
 [ext_resource type="Script" path="res://assets/torch/torch.gd" id="1_8rman"]
@@ -28,7 +28,11 @@ shader_parameter/offset = Vector2(0, 0)
 shader_parameter/noise_sampler = SubResource("NoiseTexture2D_1dd3t")
 shader_parameter/flame_gradient = SubResource("GradientTexture1D_cnwig")
 
-[node name="Torch" type="Node2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fpp3i"]
+radius = 20.0
+height = 48.0
+
+[node name="Torch" type="Area2D"]
 script = ExtResource("1_8rman")
 
 [node name="TorchBody" type="Sprite2D" parent="."]
@@ -40,3 +44,9 @@ material = SubResource("ShaderMaterial_tuqmc")
 position = Vector2(0, -30)
 scale = Vector2(0.28038, 0.28038)
 texture = ExtResource("3_5oi5q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -22)
+shape = SubResource("CapsuleShape2D_fpp3i")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
